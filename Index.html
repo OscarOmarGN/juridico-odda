@@ -8,23 +8,24 @@
 </head>
 <body>
   <main>
-    <div class="background"></div>
     <header>
-      <span class="nombre-despacho">Júridico ODDA</span>
-      <nav class="nav-links">
-        <li><a href="">Inicio</a></li>
-        <li><a href="">Nosotros</a></li>
-        <li><a href="">Casos de Éxito</a></li>
-        <li><a href="">Contacto</a></li>
+      <a href="#inicio" class="nombre-despacho">Júridico ODDA</a>
+      <div class="menu-button abrir"></div>
+      <nav class="nav-links ocultar">
+        <li class="nav-item" ><a href="#inicio">Inicio</a></li>
+        <li class="nav-item" ><a href="#nosotros">Nosotros</a></li>
+        <li class="nav-item" ><a href="#casos">Casos de Éxito</a></li>
+        <li class="nav-item" ><a href="#contacto">Contacto</a></li>
       </nav>
     </header>
-    <section class="inicio">
+    <section class="inicio" id="inicio">
       <h1>Júridoscos ODDA, Defendiendo sus Derechos con Pasión y Experiencia</h1>
       <p>Soluciones legales a su medida. Confie en nosotros para proteger su futuro</p>
       <a class="contacto-inicio" href="">Contáctenos</a>
+      <div class="background"></div>
     </section>
 
-    <section class="nosotros">
+    <section class="nosotros" id="nosotros">
       <h2>Sobre nosotros</h2>
       <div class="nosotros-content">
         <div class="nosotros-text">
@@ -52,7 +53,7 @@
         </div>
       </div>
     </section>
-    <section class="casos-exito">
+    <section class="casos-exito" id="casos">
       <h2>Casos de Éxito</h2>
       <article class="exito-content">
         <div class="caso-1 caso">
@@ -87,7 +88,7 @@
         </div>
       </article>
     </section>
-    <section class="contacto">
+    <section class="contacto" id="contacto">
       <h2>Contacto</h2>
       <form class="formulario" action="">
         <label for="nombre">Nombre</label>
@@ -95,7 +96,7 @@
         <label for="email">Correo</label>
           <input type="email" name="correo" id="email">
         <label for="mensaje">Mensaje</label>
-          <textarea name="mensaje" id="mensaje" cols="30"></textarea>
+          <textarea name="mensaje" id="mensaje" cols="3"></textarea>
           <input type="submit" class="enviar-btn" value="Enviar">
       </form>
       <div class="social">
@@ -118,5 +119,6 @@
     <p class="derechos">Todos los derechos reservados Jurídico ODDA</p>
     <p class="creador">Página creada por Oscar Garcia</p>
   </footer>
+  <script src="scripts.js"></script>
 </body>
 </html>

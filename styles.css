@@ -9,13 +9,15 @@
 
 
 body{
-  background-color: #261F1C;
+  background-color: #312622;
   color: #D9D9D9;
+  transition: all .5s ease-in-out;
 }
 
 html{
   font-size: 16px;
   box-sizing: inherit;
+  scroll-behavior: smooth;
 }
 
 
@@ -34,6 +36,10 @@ main{
   position: relative;
 }
 
+input, textarea{
+  color: #D9D9D9;
+}
+
 /*** Navegacion ***/
 
 header{
@@ -43,12 +49,19 @@ header{
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 1rem 3rem;
+  padding: .7rem 3rem;
   z-index: 1;
+  background-color: #2c3e507e;
 }
 
 .nombre-despacho{
-  color: #B89B74;
+  color: orange;
+  cursor: pointer;
+}
+
+.nombre-despacho:hover{
+  color: #ecc38c;
+
 }
 
 .nav-links{
@@ -57,10 +70,17 @@ header{
 }
 
 nav li a:visited {
-  color: inherit;
+  color: #D9D9D9;
+}
+
+nav li a:hover{
+  color: #B89B74;
 }
 
 /*** Inicio ***/
+.inicio h1, .inicio p, .inicio a{
+  z-index: 2;
+  }
 
 .inicio{
   position: relative;
@@ -70,6 +90,7 @@ nav li a:visited {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
 }
 
 .background{
@@ -79,6 +100,7 @@ nav li a:visited {
   background-image: url(assets/Gemini_Generated_Image_5buwax5buwax5buw.webp);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   filter: opacity(30%);
 }
 
@@ -90,6 +112,10 @@ nav li a:visited {
   font-weight: 900;
 }
 
+.contacto-inicio:hover{
+  background-color: #816d51;
+}
+
 /*** Nosotros ***/
 
 .nosotros{
@@ -99,7 +125,8 @@ nav li a:visited {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-    background-color: #2C3E50;
+  background-color: #2C3E50;
+  gap: 2rem;
 }
 
 .nosotros-text{
@@ -134,8 +161,9 @@ nav li a:visited {
 }
 
 .nosotros-text-derecha p{
-  margin: .5rem;
+  margin: 0 0 .5rem 0;
 }
+
 .area{
   display: flex;
   flex-direction: column;
@@ -193,6 +221,11 @@ nav li a:visited {
   justify-content: center;
   align-items: center;
   background-color: #2C3E50;
+  padding-top: 3rem;
+}
+
+.contacto h2{
+  margin-bottom: 3rem;
 }
 
 .formulario{
@@ -217,6 +250,13 @@ input, textarea{
 .enviar-btn{
   padding: .4rem;
   background-color: #B89B74;
+  color: #261f1c;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.enviar-btn:hover{
+  background-color: #816d51;
 }
 
 .social{
@@ -230,10 +270,17 @@ input, textarea{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: .5rem;
+  cursor: pointer;
 }
 
 .social-logo{
   width: 2.5rem;
+}
+textarea{
+  resize: none;
+  field-sizing: content;
+  min-height: 3rem;
 }
 
 /*** footer ***/
@@ -249,4 +296,215 @@ footer p{
 
 .creador{
   font-size: .9rem;
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 768px) {
+  
+
+  .menu-button{
+    width: 2.5rem;
+    height: 2.5rem;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: .5rem;
+    top: -2px;
+    transition: all .3s ease-in-out;
+  }
+  
+  .abrir{
+    background-image: url(assets/iconmonstr-menu-lined.svg);
+  }
+
+  .cerrar{
+    background-image: url(assets/iconmonstr-x-mark-lined.svg);
+  }
+
+  header{
+    padding: .5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    z-index: 2;
+  }
+  
+  .nav-links{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: .3rem;
+    transition: all .3s ease;
+  }
+
+  .ocultar{
+    display: none;
+  }
+
+  .mostrar{
+    display: flex;
+  }
+
+
+  /*** inicio ***/
+
+  .inicio{
+    text-align: center;
+    justify-content: start;
+    height: 100vh;
+    z-index: 1;
+    overflow: hidden;
+    gap: .3rem;
+    padding: 0 1rem;
+  }
+
+  .inicio h1{
+    margin-top: 30vh;
+    font-size: 1.3rem;
+  }
+
+  .inicio p{
+    font-size: .8rem;
+    padding: 1rem;
+  }
+
+  /*** nosotros ***/
+
+  .nosotros-img{
+    width: 40%;
+  }
+
+  .nosotros{
+    text-align: justify;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .nosotros-text{
+    grid-template-columns: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .nosotros-text-derecha h3{
+    text-align: center;
+  }
+  .areas{
+    gap: .3rem;
+  }
+
+  /*** casos de exito ***/
+
+  .casos-exito{
+    height: fit-content;
+    padding: 4.5rem 0;
+    width: 90%;
+  }
+  
+  
+  .exito-content{
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .area{
+    height: 8rem;
+  }
+
+  /*** contacto ***/
+
+  .formulario{
+    width: 90%;
+  }
+
+  .contaco h2{
+    margin-bottom: 1rem;
+  }
+
+  /*** social ***/
+
+
+  .social{
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: .5rem;
+  }
+
+  .social-item{
+    justify-content: baseline;
+  }
+
+  .social-logo{
+    width: 2rem;
+  }
+
+  /*** footer ***/
+  footer{
+    padding: .7rem 0;
+  }
+  .derechos{
+    font-size: .8rem;
+  }
+  .creador{
+    font-size: .6rem;
+  }
+  
+
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+
+  /*** nosotros ***/
+
+  .nosotros-img{
+    width: 40%;
+  }
+
+  .inicio h1{
+    text-align: center;
+  }
+
+
+  .nosotros{
+    text-align: justify;
+    flex-direction: column;
+    height: fit-content;
+    padding: 3rem 0;
+  }
+
+  .nosotros-text{
+    grid-template-columns: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .nosotros-text-derecha h3{
+    text-align: center;
+  }
+  
+
+  /*** casos de exito ***/
+
+  .casos-exito{
+    height: fit-content;
+    padding: 4.5rem 0;
+    width: 90%;
+  }
+  
+  
+  .exito-content{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .area{
+
+    height: 8rem;
+  }
+
 }
