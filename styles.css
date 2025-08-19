@@ -74,6 +74,11 @@ nav li a:visited {
   color: #D9D9D9;
 }
 
+.nav-item{
+  color: #D9D9D9;
+
+}
+
 nav li a:hover{
   color: #B89B74;
 }
