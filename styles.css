@@ -162,6 +162,7 @@ nav li a:hover{
 .areas{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 10rem);
   gap: 3rem;
   margin-top: 2rem;
 }
@@ -175,14 +176,35 @@ nav li a:hover{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 10rem;
+  /* height: fit-content; */
   border-radius: 10px;
   background-color: #261F1C;
+  gap: .5rem;
+  padding: 1rem 0;
+}
+
+.area:hover{
+  transform: scale(120%);
 }
 
 .areas-icono{
   width: 3rem;
 }
+
+.laboral{
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+
+.logo-area{
+  overflow: hidden;
+  padding: 0;
+}
+
+.logo-area img{
+  width: 100%;
+}
+
 
 .areas p{
   margin-top: 0;
@@ -205,15 +227,62 @@ nav li a:hover{
 
 .exito-content{
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 4rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: .5rem;
 }
 
 .caso{
   padding: 1.5rem;
   border-radius: 10px;
   background-color: #4C3F3A;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
 }
+
+.caso-img{
+  width: 10rem;
+}
+
+.caso-1{
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.caso-1 img{
+  width: 60%;
+  margin: 0 auto;
+}
+
+.caso-2{
+  display: flex;
+  flex-direction: row;
+}
+
+.caso-2 img{
+  width: 15rem;
+}
+
+.caso-2-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+}
+
+
+.caso-3 img{
+  margin: 0 auto;
+  width: 60%;
+}
+
+.caso-4 img{
+  width: 100%;
+}
+
+
 
 .resolucion{
   color: #B89B74;
@@ -234,6 +303,12 @@ nav li a:hover{
   margin-bottom: 3rem;
 }
 
+.contacto-text{
+  width: 20rem;
+  margin-bottom: 3rem;
+  text-align: justify;
+}
+
 .formulario{
   display: flex;
   flex-direction: column;
@@ -251,6 +326,10 @@ input, textarea{
   background-color: grey;
   padding: .3rem;
   background-color: #4C3F3A;
+}
+
+input:focus, textarea:focus{
+  outline: none;
 }
 
 .enviar-btn{
@@ -384,14 +463,25 @@ footer p{
   .nosotros{
     text-align: justify;
     flex-direction: column;
-    min-height: 100vh;
+    height: fit-content;
+    padding: 3rem 0;
   }
 
   .nosotros-text{
     grid-template-columns: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 2rem;
+    margin: 0;
+    width: 100%;
+  }
+  
+  .nosotros-text-derecha{
+    justify-content: center;
+    align-items: center;
+    width: 90%;
   }
 
   .nosotros-text-derecha h3{
@@ -399,6 +489,23 @@ footer p{
   }
   .areas{
     gap: .3rem;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 7rem);
+  }
+
+  .areas-icono{
+    width: 2rem;
+  }
+
+  .area{
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .logo-area img{
+    width: 100%;
+    height: fit-content;
   }
 
   /*** casos de exito ***/
@@ -415,8 +522,19 @@ footer p{
     gap: 1rem;
   }
 
-  .area{
-    height: 8rem;
+  .caso-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+  }
+
+  .caso-2-text{
+    gap: 1rem;
+  }
+  .caso-2 img{
+    width: 7rem;
+    height: fit-content;
   }
 
   /*** contacto ***/
@@ -427,6 +545,10 @@ footer p{
 
   .contaco h2{
     margin-bottom: 1rem;
+  }
+
+  .contacto-text{
+    width: 90%;
   }
 
   /*** social ***/
